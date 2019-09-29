@@ -1,0 +1,43 @@
+[
+  {
+    "name"              : "eth1",
+    "cwd"               : "../node1",
+    "script"            : "start.sh",
+    "args"              : "ethpassword",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "log_file"          : "./logs/eth-log.log",
+    "out_file"          : "./logs/eth-out.log",
+    "error_file"        : "./logs/eth-err.log",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "max_restarts"      : 10,
+    "exec_interpreter"  : "bash",
+    "exec_mode"         : "fork_mode"
+  },
+  {
+    "name"              : "node-app1",
+    "cwd"               : "./",
+    "script"            : "app.js",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "log_file"          : "./logs/node-app-log.log",
+    "out_file"          : "./logs/node-app-out.log",
+    "error_file"        : "./logs/node-app-err.log",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "max_restarts"      : 10,
+    "exec_interpreter"  : "node",
+    "exec_mode"         : "fork_mode",
+    "env":
+    {
+      "NODE_ENV"        : "production",
+      "RPC_HOST"        : "localhost",
+      "RPC_PORT"        : "8545",
+      "LISTENING_PORT"  : "30303",
+      "INSTANCE_NAME"   : "멍개님의 노드1",
+      "CONTACT_DETAILS" : "",
+      "WS_SERVER"       : "127.0.0.1:3000",
+      "WS_SECRET"       : "hello_world",
+      "VERBOSITY"       : 2
+    }
+  }
+]
