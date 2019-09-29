@@ -1,4 +1,5 @@
-DATA_STORE
+DATA_STORE/cache
+DATA_STORE/chains
 logs
 eth-net-intelligence-api1/logs
 eth-net-intelligence-api2/logs
